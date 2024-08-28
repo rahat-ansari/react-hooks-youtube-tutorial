@@ -1,3 +1,5 @@
+import HookUseEffect from "./AllHooks/HookUseEffect";
+import HookUseState from "./AllHooks/HookUseState";
 import useFetchAPI from "./AllHooks/useFetchAPI";
 import "./App.css";
 
@@ -13,8 +15,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <HookUseState /> */}
-      {/* <HookUseEffect /> */}
+      <h2>HookUseState Counter</h2>
+      <HookUseState />
+      <h2>HookUseEffect Window Width</h2>
+
+      <HookUseEffect />
       {/* <HookUseMemo /> */}
       {/* <HookUseCallback /> */}
       {/* <HookUseRef /> */}
@@ -23,13 +28,14 @@ function App() {
       {/* <HookUseImperativeHandle /> */}
       {/* <HookUseLayoutEffect /> */}
 
+      <h2>useFetchAPI Direct fecth</h2>
       <ul>
-        {data?.map((item) => (
-          <li>{item.name}</li>
+        {data?.map((item, index) => (
+          <li key={index}>{item.name}</li>
         ))}
       </ul>
     </div>
   );
-}
 
+}
 export default App;

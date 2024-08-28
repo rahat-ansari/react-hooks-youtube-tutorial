@@ -39,10 +39,10 @@ function HookUseEffect() {
 
   return (
     <>
-      <button onClick={handleSubstract}>-</button>
+      {/* <button onClick={handleSubstract}>-</button>
       <span>{count.num}</span>
       <span>{count.id}</span>
-      <button onClick={handleAdd}>+</button>
+      <button onClick={handleAdd}>+</button> */}
       <p>{screenWidth}</p>
     </>
   );
